@@ -1,11 +1,22 @@
 import argparse
 import logging
 import news_page_objects as news
+import re  # for regular expressions
 from common import config
 
+from requests.exceptions import HTTPError
+from urllib3.exceptions import MaxRetryError
 
 logging.basicConfig(level=logging.INFO)
 
+# r --> indica a python que es un string raw
+# ^ --> nos da el inicio de la palabra
+# ? --> opcional la s
+# .+ --> por lo menos una o más letras
+# $ terminamos el patrón
+
+is_well_formed_link = re.compile(r"^https?://.+/.+$")  # https://example.com/some-text
+is_root_path = re.compile(r"^/.+$")  # /some-text
 logger = logging.getLogger(__name__)
 
 
@@ -13,10 +24,44 @@ def _news_scraper(news_site_uid):
     host = config()["news_sites"][news_site_uid]["url"]
 
     logging.info("Beginning scraper for {}".format(host))
-    homePage = news.HomePage(news_site_uid, host)
+    home_page = news.HomePage(news_site_uid, host)
 
-    for link in homePage.article_links:
-        print(link)
+    articles = []
+    for link in home_page.article_links:
+        article = _fetch_article(news_site_uid, link)
+
+        if article:
+            logger.info("Article fetched!!")
+            articles.append(article)
+            print(article.title)
+
+    print(len(articles))
+
+
+def _fetch_article(news_site_uid, link):
+    logger.info("Start fetching article at {}".format(link))
+
+    article = None
+
+    try:
+        article = news.ArticlePage(news_site_uid, _build_link(link))
+    # except (HTTPError, MaxRetryError) as e:
+    except:
+        # HTTPErrorr --> cuando no se ha encontrado la página
+        # MaxRetryError --> estoy eliminadno la posibildad de que se vaya al infinito tratando de seguir la URL
+        logger.warning("Error while fetching the article", exc_info=False)
+        # exc_info=False --> para que no me muestre el error
+
+    if article and not article.body and not article.title:
+        logger.warning("Invalid article. There is no body")
+        return None
+
+    return article
+
+
+def _build_link(link):
+    if is_well_formed_link.match(link):
+        return link
 
 
 if __name__ == "__main__":

@@ -2,6 +2,7 @@ import argparse
 import logging
 from urllib.parse import urlparse
 import pandas as pd
+import hashlib
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -15,6 +16,8 @@ def main(filename):
     df = _add_newspaper_uid_column(df, newspaper_uid)
     df = _extract_host(df)
     df = _fill_missing_bodies(df)
+    df = _generate_uids_for_rows(df)
+    df = _remove_new_lines_from_body(df)
 
     return df
 
@@ -64,6 +67,40 @@ def _fill_missing_bodies(df):
                       .applymap(lambda body_word_list: " ".join(body_word_list))
                       )
     df.loc[missing_bodies_mask, "body"] = missing_bodies.loc[:, "missing_bodies"]
+
+    return df
+
+
+def _generate_uids_for_rows(df):
+    logger.info("Generating uids for eachs row")
+    # hashlib --> normalmente se utiliza para operaciones criptográficas, pero la vamos a utilziar para generar un hash
+    #            de la URL, de tal manera que tengamos un número único que mapee siempre a esa URL
+
+    # axis=0 -->columbas
+    # axis=1 -->filas
+
+    uids = (df
+            .apply(lambda row: hashlib.md5(bytes(row["article_links"].encode())), axis=1)
+            .apply(lambda hash_object: hash_object.hexdigest())
+            )
+    df["uid"] = uids
+
+    # inplace --> le indica que queremos modificar directamente nuestra tabla
+    df.set_index("uid", inplace=True)
+
+    return df
+
+
+def _remove_new_lines_from_body(df):
+    logger.info("Removing new lines from body")
+    strippped_body = (df
+                      .apply(lambda row: row["body"], axis=1)
+                      .apply(lambda body: list(body))
+                      .apply(lambda letters: list(map(lambda letter: letter.replace("\n", " "), letters)))
+                      .apply(lambda letters: list(map(lambda letter: letter.replace("\r", " "), letters)))
+                      .apply(lambda letters: "".join(letters))
+                      )
+    df["body"] = strippped_body
 
     return df
 

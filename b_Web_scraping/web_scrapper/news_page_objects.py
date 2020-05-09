@@ -7,6 +7,7 @@ from common import config
 class NewsPage:
 
     def __init__(self, news_site_uid, url):
+        self._url = url
         self._config = config()["news_sites"][news_site_uid]
         self._queries = self._config["queries"]
         self._html = None
@@ -56,3 +57,8 @@ class ArticlePage(NewsPage):
         result = self._select(self._queries["article_title"])
 
         return result[0].text if len(result) else ""
+
+    @property
+    def article_links(self):
+
+        return self._url

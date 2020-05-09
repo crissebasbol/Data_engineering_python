@@ -19,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/c_Pandas/newspaper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="99" column="92" selection-start-line="99" selection-start-column="92" selection-end-line="99" selection-end-column="92" />
+            <state relative-caret-position="186">
+              <caret line="110" column="43" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="43" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -41,6 +41,7 @@
     <findStrings>
       <find>requ</find>
       <find>_select</find>
+      <find>encod</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -54,8 +55,8 @@
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/b_Web_scraping/web_scrapper/common.py" />
         <option value="$PROJECT_DIR$/b_Web_scraping/web_scrapper/config.yaml" />
-        <option value="$PROJECT_DIR$/b_Web_scraping/web_scrapper/news_page_objects.py" />
         <option value="$PROJECT_DIR$/b_Web_scraping/web_scrapper/main.py" />
+        <option value="$PROJECT_DIR$/b_Web_scraping/web_scrapper/news_page_objects.py" />
         <option value="$PROJECT_DIR$/c_Pandas/newspaper.py" />
       </list>
     </option>
@@ -77,6 +78,17 @@
             <path>
               <item name="Ingenieria_datos_python" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ingenieria_datos_python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ingenieria_datos_python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ingenieria_datos_python" type="462c0819:PsiDirectoryNode" />
+              <item name="b_Web_scraping" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ingenieria_datos_python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ingenieria_datos_python" type="462c0819:PsiDirectoryNode" />
+              <item name="b_Web_scraping" type="462c0819:PsiDirectoryNode" />
+              <item name="web_scrapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ingenieria_datos_python" type="b2602c69:ProjectViewProjectNode" />
@@ -175,12 +187,12 @@
       <workItem from="1588050238138" duration="7790000" />
       <workItem from="1588627258722" duration="598000" />
       <workItem from="1588977356281" duration="5596000" />
-      <workItem from="1588999267084" duration="4684000" />
+      <workItem from="1588999267084" duration="5813000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25154000" />
+    <option name="totallyTimeSpent" value="26283000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1296" height="1000" extended-state="6" />
@@ -230,16 +242,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/b_Web_scraping/web_scrapper/news_page_objects.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/b_Web_scraping/web_scrapper/config.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -247,10 +249,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/b_Web_scraping/web_scrapper/news_page_objects.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/b_Web_scraping/web_scrapper/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+        <state relative-caret-position="189">
+          <caret line="68" column="45" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="45" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -259,8 +271,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/c_Pandas/newspaper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="99" column="92" selection-start-line="99" selection-start-column="92" selection-end-line="99" selection-end-column="92" />
+        <state relative-caret-position="186">
+          <caret line="110" column="43" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="43" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

@@ -105,6 +105,12 @@ def _remove_new_lines_from_body(df):
     return df
 
 
+def _save_df(df, filename):
+    logger.info("Saving new file")
+    filename = "{}_cleaned.csv".format(filename[:-4])
+    df.to_csv(filename, encoding="utf-8-sig")
+
+
 if __name__ == "__main__":
     # Le preguntamos al usuario cuál va a ser el archivo con el que quiere trabajar
     parser = argparse.ArgumentParser()
@@ -116,3 +122,5 @@ if __name__ == "__main__":
     df = main(arg.filename)
 
     print(df)
+
+    _save_df(df, arg.filename)

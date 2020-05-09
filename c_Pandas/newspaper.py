@@ -14,6 +14,7 @@ def main(filename):
     newspaper_uid = _extract_newspaper_uid(filename)
     df = _add_newspaper_uid_column(df, newspaper_uid)
     df = _extract_host(df)
+    df = _fill_missing_bodies(df)
 
     return df
 
@@ -42,6 +43,27 @@ def _add_newspaper_uid_column(df, newspaper_uid):
 def _extract_host(df):
     logger.info("Extracting host from urls")
     df["host"] = df["article_links"].apply(lambda article_links: urlparse(article_links).netloc)
+
+    return df
+
+
+def _fill_missing_bodies(df):
+    logger.info("Filling missing bodies")
+    missing_bodies_mask = df["body"].isna()
+    # en el body vamos a colocar el texto del último pedazo de la url
+    # [^/]-->queremos que haga match hasta que no encuentre una diagonal adicional
+    # [^/]+-->que esto puede suceder una o más veces
+    # ([^/]+)$ --> vamos ir hasta el final de nuestro string
+    # (?P<missing_bodies>[^/]+)$ --> colocar un nombre al grupo
+
+    # applymap nos permite generar un mapa de un valor a otro, es decir una transformación
+
+    missing_bodies = (df[missing_bodies_mask]["article_links"]
+                      .str.extract(r"(?P<missing_bodies>[^/]+)$")
+                      .applymap(lambda body: body.split("-"))
+                      .applymap(lambda body_word_list: " ".join(body_word_list))
+                      )
+    df.loc[missing_bodies_mask, "body"] = missing_bodies.loc[:, "missing_bodies"]
 
     return df
 

@@ -25,6 +25,8 @@ def main(filename):
     df = _remove_new_lines_from_body(df)
     df = _tokenize_column(df, "title", "spanish")
     df = _tokenize_column(df, "body", "spanish")
+    df = _remove_duplicate_entries(df, "title")
+    df = _drop_rows_with_missing_values(df)
 
     return df
 
@@ -146,14 +148,31 @@ def _tokenize_column(df, column_name, language):
     return df
 
 
+def _remove_duplicate_entries(df, column_name):
+    logger.info("Removing duplicate entries")
+    # keep: que tome los valores del primer duplicado o el último (last).
+    # inplace = realizamos la modificación directamente.
+    df.drop_duplicates(subset=[column_name], keep="first", inplace=True)
+
+    return df
+
+
+def _drop_rows_with_missing_values(df):
+    logger.info("Dropping rows with missing values")
+
+    return df.dropna()
+
 
 def _save_df(df, filename):
-    logger.info("Saving new file")
     filename = "{}_cleaned.csv".format(filename[:-4])
+    logger.info("Saving new file at location {}".format(filename))
     df.to_csv(filename, encoding="utf-8-sig")
 
 
 if __name__ == "__main__":
+    # Para llamar al archivo:
+    #   (python newspaper.py elpais_2020_05_08_articles.csv) --> Aclarando que debo correr el ambiente de conda
+
     # Le preguntamos al usuario cuál va a ser el archivo con el que quiere trabajar
     parser = argparse.ArgumentParser()
     parser.add_argument("filename",

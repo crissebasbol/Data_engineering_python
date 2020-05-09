@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8cf2f55-98ce-4e32-accd-3298a3290fc6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/c_Pandas/newspaper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c_Pandas/Introduction Pandas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/c_Pandas/Introduction Pandas.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="c8cf2f55-98ce-4e32-accd-3298a3290fc6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +17,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/c_Pandas/newspaper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="238">
               <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -176,12 +173,12 @@
       <workItem from="1588050238138" duration="7790000" />
       <workItem from="1588627258722" duration="598000" />
       <workItem from="1588977356281" duration="5596000" />
-      <workItem from="1588999267084" duration="1206000" />
+      <workItem from="1588999267084" duration="1540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21676000" />
+    <option name="totallyTimeSpent" value="22010000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1296" height="1000" extended-state="6" />
@@ -260,7 +257,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/c_Pandas/newspaper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="238">
           <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />

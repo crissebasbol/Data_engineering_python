@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8cf2f55-98ce-4e32-accd-3298a3290fc6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/c_Pandas/newspaper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c_Pandas/Introduction Pandas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/c_Pandas/Introduction Pandas.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,44 +17,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/b_Web_scraping/web_scrapper/common.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/b_Web_scraping/web_scrapper/news_page_objects.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="50" column="35" lean-forward="true" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/b_Web_scraping/web_scrapper/main.py">
+        <entry file="file://$PROJECT_DIR$/c_Pandas/newspaper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+            <state relative-caret-position="391">
+              <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/b_Web_scraping/web_scrapper/config.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="10" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -86,6 +57,7 @@
         <option value="$PROJECT_DIR$/b_Web_scraping/web_scrapper/config.yaml" />
         <option value="$PROJECT_DIR$/b_Web_scraping/web_scrapper/news_page_objects.py" />
         <option value="$PROJECT_DIR$/b_Web_scraping/web_scrapper/main.py" />
+        <option value="$PROJECT_DIR$/c_Pandas/newspaper.py" />
       </list>
     </option>
   </component>
@@ -110,13 +82,7 @@
             <path>
               <item name="Ingenieria_datos_python" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ingenieria_datos_python" type="462c0819:PsiDirectoryNode" />
-              <item name="b_Web_scraping" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ingenieria_datos_python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ingenieria_datos_python" type="462c0819:PsiDirectoryNode" />
-              <item name="b_Web_scraping" type="462c0819:PsiDirectoryNode" />
-              <item name="web_scrapper" type="462c0819:PsiDirectoryNode" />
+              <item name="c_Pandas" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -210,16 +176,18 @@
       <workItem from="1588050238138" duration="7790000" />
       <workItem from="1588627258722" duration="598000" />
       <workItem from="1588977356281" duration="5596000" />
+      <workItem from="1588999267084" duration="1206000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20470000" />
+    <option name="totallyTimeSpent" value="21676000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1296" height="1000" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26213592" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26618123" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -256,6 +224,23 @@
     <entry file="file://$PROJECT_DIR$/b_Web_scraping/web_scrapper/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/b_Web_scraping/web_scrapper/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/b_Web_scraping/web_scrapper/news_page_objects.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/b_Web_scraping/web_scrapper/config.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -263,27 +248,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/b_Web_scraping/web_scrapper/common.py">
+    <entry file="file://$PROJECT_DIR$/b_Web_scraping/web_scrapper/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/b_Web_scraping/web_scrapper/news_page_objects.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="50" column="35" lean-forward="true" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+        <state relative-caret-position="221">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/b_Web_scraping/web_scrapper/main.py">
+    <entry file="file://$PROJECT_DIR$/c_Pandas/newspaper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+        <state relative-caret-position="391">
+          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

@@ -3,6 +3,11 @@ import logging
 from urllib.parse import urlparse
 import pandas as pd
 import hashlib
+import nltk # nltk: Ayuda a trabjar con lenguage natural
+from nltk.corpus import stopwords
+# stopwords : son palabras que no añaden ningún tipo de analisis posterior, por ejemplo "el, la",
+# palabras que se utilizan mucho en el lenguage pero no ayudan a determinar que está sucedienendo
+# dentro de nuestro análisis de texto
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -18,6 +23,8 @@ def main(filename):
     df = _fill_missing_bodies(df)
     df = _generate_uids_for_rows(df)
     df = _remove_new_lines_from_body(df)
+    df = _tokenize_column(df, "title", "spanish")
+    df = _tokenize_column(df, "body", "spanish")
 
     return df
 
@@ -103,6 +110,41 @@ def _remove_new_lines_from_body(df):
     df["body"] = strippped_body
 
     return df
+
+
+def _tokenize_column(df, column_name, language):
+    # una función que nos va a generar las transformaciones en la columna deseada (primero título y luego enn el body)
+    logger.info("Tokenizing column {}".format(column_name))
+    # si nunca hemos corrido nltk, nos va a pedir que bajemos los archivos adicionales, instalarla no
+    # es suficiente porque es una librería enorme, entonces la primera vez que corremos esta librería,
+    # nos pide que ajemos las librerías adicionales, se debe colocar el siguiente código
+    try:
+        nltk.data.find("tokenizers/punkt")
+        # punkt: librería para poder tokenizar, es decir dividir en palabras
+    except LookupError:
+        nltk.download("punkt")
+
+    try:
+        nltk.data.find("stopwords")
+    except LookupError:
+        nltk.download("stopwords")
+    finally:
+        stop_words = set(stopwords.words(language))
+        # los stop_words: vienen en minúsuculas
+
+    tokenize_column = (df
+                       .dropna() # Eliminamos las que no tienen datos, de lo contrario nltk existirá un error.
+                       .apply(lambda row: nltk.word_tokenize(row[column_name]), axis=1)
+                       .apply(lambda tokens: list(filter(lambda token: token.isalpha(), tokens))) # Eliminar palabras que no sean alfanuméricas
+                       .apply(lambda tokens: list(map(lambda token: token.lower(), tokens))) # convertir todos los tokesns a lowerCase
+                       .apply(lambda word_list: list(filter(lambda word: word not in stop_words, word_list))) # Eliminar las palabras que sean stop_words
+                       .apply(lambda valid_word_list: len(valid_word_list)) # obtener la longitud que tiene cada una de estas listas
+                       )
+
+    df["n_tokens_{}".format(column_name)] = tokenize_column
+
+    return df
+
 
 
 def _save_df(df, filename):

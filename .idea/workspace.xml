@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8cf2f55-98ce-4e32-accd-3298a3290fc6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/d_Data_systems/__init.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d_Data_systems/article.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d_Data_systems/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d_Data_systems/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e_Final_Project/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e_Final_Project/extract/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e_Final_Project/extract/common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e_Final_Project/extract/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e_Final_Project/extract/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e_Final_Project/extract/news_page_objects.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e_Final_Project/load/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e_Final_Project/load/article.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e_Final_Project/load/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e_Final_Project/load/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e_Final_Project/transform/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d_Data_systems/New Microsoft Word Document.docx" beforeDir="false" afterPath="$PROJECT_DIR$/c_Pandas/__init.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,10 +31,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/c_Pandas/newspaper.py">
+        <entry file="file://$PROJECT_DIR$/e_Final_Project/pipeline.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="54" />
+            <state relative-caret-position="-221">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -36,35 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/d_Data_systems/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/d_Data_systems/article.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="15" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/d_Data_systems/main.py">
+        <entry file="file://$PROJECT_DIR$/e_Final_Project/extract/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+            <state relative-caret-position="221">
+              <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -107,6 +89,8 @@
         <option value="$PROJECT_DIR$/d_Data_systems/base.py" />
         <option value="$PROJECT_DIR$/d_Data_systems/article.py" />
         <option value="$PROJECT_DIR$/d_Data_systems/main.py" />
+        <option value="$PROJECT_DIR$/e_Final_Project/pipeline.py" />
+        <option value="$PROJECT_DIR$/e_Final_Project/extract/main.py" />
       </list>
     </option>
   </component>
@@ -131,12 +115,25 @@
             <path>
               <item name="Ingenieria_datos_python" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ingenieria_datos_python" type="462c0819:PsiDirectoryNode" />
-              <item name="c_Pandas" type="462c0819:PsiDirectoryNode" />
+              <item name="e_Final_Project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ingenieria_datos_python" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ingenieria_datos_python" type="462c0819:PsiDirectoryNode" />
-              <item name="d_Data_systems" type="462c0819:PsiDirectoryNode" />
+              <item name="e_Final_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="extract" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ingenieria_datos_python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ingenieria_datos_python" type="462c0819:PsiDirectoryNode" />
+              <item name="e_Final_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="load" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ingenieria_datos_python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ingenieria_datos_python" type="462c0819:PsiDirectoryNode" />
+              <item name="e_Final_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="transform" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -230,12 +227,12 @@
       <workItem from="1588050238138" duration="7790000" />
       <workItem from="1588627258722" duration="598000" />
       <workItem from="1588977356281" duration="5596000" />
-      <workItem from="1588999267084" duration="13482000" />
+      <workItem from="1588999267084" duration="20725000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33952000" />
+    <option name="totallyTimeSpent" value="41195000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1296" height="1000" extended-state="6" />
@@ -318,7 +315,7 @@
     <entry file="file://$PROJECT_DIR$/d_Data_systems/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
@@ -327,16 +324,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/d_Data_systems/__init.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c_Pandas/newspaper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/d_Data_systems/article.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -350,8 +337,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/d_Data_systems/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        <state relative-caret-position="455">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c_Pandas/newspaper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e_Final_Project/pipeline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e_Final_Project/extract/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
